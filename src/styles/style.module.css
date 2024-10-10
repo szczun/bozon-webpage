@@ -20,8 +20,13 @@ html {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-
         padding: 0rem;
     }
 
+}
+
+@media (min-width: 455px) {
+    .root-container {
+        display: none;
+    }
 }

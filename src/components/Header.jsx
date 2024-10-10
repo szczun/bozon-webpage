@@ -1,25 +1,54 @@
 //css
 import headerStyle from '../styles/header.module.css';
 
-// images
-import bozonLogo from '../images/bozon-logo.jpg';
-import homeLogo from '../images/home-button.png';
-import hamburgerIcon from '../images/icons8-hamburger-menu-50.png';
+// react things
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
-const Header = () => {
+// react components
+import MenuModal from './MenuModal';
 
+const Header = ({ showModal, setShowModal }) => {
+
+    const [isTransitioning, setIsTransitioning] = useState(false);
+    const toggleModal = () => {
+        if (isTransitioning) return;
+
+        setIsTransitioning(true);
+        setShowModal(prev => !prev);
+
+        setTimeout(() => {
+            setIsTransitioning(false);
+        }, 200);
+    };
     return (
         <section>
             <div className={headerStyle['header-page-container']}>
-                <div className={headerStyle.home}>
-                    <img alt='ikonka domu' src={homeLogo}></img>
+                <Link to='/' className={headerStyle['home']}>
+                    <img alt='ikonka domu' src='../images/home-button.png'></img>
                     <span>Strona główna</span>
-                </div>
+                </Link>
                 <div className={headerStyle['bozon-icon-container']}>
-                    <img alt='logo bozonu' className={headerStyle['bozon-icon']} src={bozonLogo}></img>
+                    <img alt='logo bozonu' className={headerStyle['bozon-icon']} src='../images/bozon-logo.jpg'></img>
                 </div>
                 <div className={headerStyle['hamburger-icon-container']}>
-                    <img alt='rozwiniecie menu' className={headerStyle['hamburger']} src={hamburgerIcon}></img>
+                    <button
+                        onClick={toggleModal}
+                        style={{ display: 'flex', justifyContent: 'center', backgroundColor: 'transparent', border: 'none' }}>
+                        <img alt='rozwiniecie menu' className={headerStyle['hamburger']} src='../images/icons8-hamburger-menu-50.png'></img>
+                        {showModal &&
+                            (
+                                <MenuModal>
+                                    <ul>
+                                        <Link to={'/o_nas'}><li>O nas</li></Link>
+                                        <Link to={'/kontakt'}><li>Kontakt</li></Link>
+                                        <Link><li>Członkostwo</li></Link>
+                                        <Link><li>Projekty</li></Link>
+                                        <Link><li>Galeria</li></Link>
+                                    </ul>
+                                </MenuModal>
+                            )}
+                    </button>
                 </div>
             </div >
         </section>

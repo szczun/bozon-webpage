@@ -7,6 +7,7 @@ import rightArrow from '../images/icons8-right-arrow-50.png';
 
 import arrayImages from './import/importSemi';
 import { useState } from 'react';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 const Seminaria = () => {
 
     const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -15,22 +16,22 @@ const Seminaria = () => {
     const nextImage = () => {
         if (currentIndex < totalAmountOfImages - 1) {
             setCurrentIndex(currentIndex + 1);
-            console.log(currentIndex);
         } else {
             setCurrentIndex(0);
-            throw new Error('Przekroczyłeś limit tablicy zdjęć.')
         }
     }
 
     const prevImage = () => {
         if (currentIndex > 0) {
             setCurrentIndex(currentIndex - 1);
-            console.log(currentIndex);
         } else {
             setCurrentIndex(totalAmountOfImages - 1)
         }
 
     }
+
+    const [skipPhotoAni] = useAutoAnimate<HTMLDivElement>({ duration: 200 });
+
 
     return (
         <div className={homeStyle['seminaria-container']}>
@@ -39,12 +40,13 @@ const Seminaria = () => {
                 których możecie czerpać wiedzę od pracowników Naszego wydziału!</h2>
             <h1 className={homeStyle['next-prev-semi']}>Nadchodzące i poprzednie seminaria</h1>
             <div className={homeStyle['seminaria-images-container']}>
-                <div className={homeStyle['plakat-container']}>
-                    <img alt='plakat' src={arrayImages[currentIndex]}></img>
+                <div className={homeStyle['plakat-container']} ref={skipPhotoAni}>
+                    <div key={currentIndex}>
+                        <img alt='plakat' src={arrayImages[currentIndex]}></img>
+                    </div>
                 </div>
-                {currentIndex}
                 <section>
-                    <div className={homeStyle['arrow-image']}>
+                    <div className={homeStyle['arrow-image']} >
                         <button className={homeStyle['next-prev-button']} onClick={prevImage}><img alt='strzałka w lewo' src={leftArrow}></img></button>
                     </div>
                     <div className={homeStyle['arrow-image']}>
@@ -53,7 +55,7 @@ const Seminaria = () => {
 
                 </section>
             </div>
-        </div>
+        </div >
     )
 }
 
