@@ -2,8 +2,8 @@
 import homeStyle from '../styles/homePage.module.css';
 
 // images
-import leftArrow from '../images/icons8-left-arrow-50.png';
-import rightArrow from '../images/icons8-right-arrow-50.png';
+import leftArrow from '../dist/images/icons8-left-arrow-50.png';
+import rightArrow from '../dist/images/icons8-right-arrow-50.png';
 
 import arrayImages from './import/importSemi';
 import { useState } from 'react';
