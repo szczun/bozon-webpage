@@ -1,0 +1,82 @@
+@media (max-width: 454px) {
+
+    /* NAV BAR */
+
+    section {
+        width: 100%;
+        border-bottom: 2px solid black;
+    }
+
+    .header-page-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        /* background-color: red; */
+
+        padding: 0.3rem 1rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .bozon-icon-container {
+        display: inline-flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hamburger-icon-container {
+        display: inline-flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .home {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+
+        gap: 0.7rem;
+    }
+
+    .home img {
+        width: 25px;
+    }
+
+    .home span {
+        font-family: "Open Sans", sans-serif;
+        font-size: 12px;
+    }
+
+    .bozon-icon {
+        width: 41px;
+    }
+
+    .hamburger {
+        width: 23px;
+    }
+}
+
+@media (min-width: 455px) {
+    body {
+        background-color: red;
+    }
+}
+
+@media (min-width: 800px) {
+    body {
+        background-color: blue;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        background-color: green;
+    }
+}
+
+@media (min-width: 1900px) {
+    body {
+        background-color: black;
+    }
+}

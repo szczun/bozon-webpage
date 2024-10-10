@@ -1,0 +1,237 @@
+@media (max-width: 454px) {
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .main-image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .main-image-container img {
+        width: 100%;
+        opacity: 40%;
+    }
+
+    .text-container {
+        position: absolute;
+        padding: 0rem 1rem;
+        color: #323232;
+        width: 90%;
+    }
+
+    .text-container h1 {
+        font-size: 24px;
+        color: #323232;
+        margin: 0;
+    }
+
+    .text-container h2 {
+        font-size: 14px;
+        color: black;
+        font-weight: 100;
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    .text-container button {
+        background-color: #00000070;
+        color: white;
+        border: none;
+        font-size: 14px;
+        padding: 0.4rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .text-container button:hover {
+        color: #00000070;
+        background-color: white;
+    }
+
+
+    .second-part-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .second-part-container span {
+        font-size: 14px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+    }
+
+    .second-part-container h1 {
+        font-size: 22px;
+        color: black;
+        font-family: "Open Sans", sans-serif;
+
+        font-weight: 600;
+        margin: 3px;
+    }
+
+    .second-part-container h3 {
+        font-size: 15px;
+        color: black;
+        font-weight: 100;
+        font-family: "Open Sans", sans-serif;
+        text-align: center;
+        width: 90%;
+        margin: 3px;
+    }
+
+    .activity-container {
+        display: grid;
+        align-items: flex-start;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 1rem;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .activity-container-image img {
+        width: 100%;
+    }
+
+    .activity-container-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+    }
+
+    .activity-container-image span {
+        font-size: 16px;
+        font-family: "Open Sans", sans-serif;
+        text-align: center;
+
+        font-weight: 600;
+    }
+
+
+    .activity-container h3 {
+        font-size: 14px;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        color: black;
+        opacity: 70%;
+        margin: 0;
+    }
+
+    /* SEMINARIA CSS */
+
+    .seminaria-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .seminaria-container h1,
+    .seminaria-container h2 {
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .seminaria-container h1 {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .next-prev-semi {
+        font-size: 10px;
+    }
+
+    .seminaria-container h2 {
+        font-size: 16px;
+        font-weight: 300;
+        color: #00000090;
+        text-align: center;
+    }
+
+    .seminaria-images-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        padding: 1rem;
+    }
+
+    .seminaria-images-container section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    section:last-child {
+        border: none;
+    }
+
+    .plakat-container {
+        width: 100%;
+    }
+
+    .plakat-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .arrow-image {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        padding: 0rem 1rem;
+        width: 100%;
+    }
+
+    .next-prev-button {
+        border: none;
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .arrow-image:last-child {
+        justify-content: flex-end;
+    }
+
+    .arrow-image img {
+        width: 25%;
+    }
+
+}
+
+@media (min-width: 455px) {}
+
+@media (min-width: 800px) {
+    body {
+        background-color: blue;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        background-color: green;
+    }
+}
+
+@media (min-width: 1900px) {
+    body {
+        background-color: black;
+    }
+}
