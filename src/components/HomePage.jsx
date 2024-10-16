@@ -29,7 +29,7 @@ const HomePage = () => {
             </div>
             <div className={homeStyle['activity-container']}>
                 <div className={homeStyle['activity-container-image']}>
-                    <img alt='zdjecie' src='../images/research-photo.jpg'></img>
+                    <img alt='zdjecie' src='../dist/images/research-photo.jpg'></img>
                     <span>W jaki sposób dołączyc do Bozonu ?</span>
                     <h3>Kliknij w obrazek lub w zakładkę “Członkostwo” aby poznać więcej informacji.</h3>
                 </div>
