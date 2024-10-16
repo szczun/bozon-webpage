@@ -6,4 +6,3 @@ vite.config.js
 global.d.ts
 .prettierrc
 .eslintrc.json
-/src/
