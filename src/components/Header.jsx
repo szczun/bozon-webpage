@@ -8,6 +8,9 @@ import { useState } from 'react';
 // react components
 import MenuModal from './MenuModal';
 
+//images
+import headerPageImages from './import/importHeaderImages';
+
 const Header = ({ showModal, setShowModal }) => {
 
     const [isTransitioning, setIsTransitioning] = useState(false);
@@ -25,17 +28,17 @@ const Header = ({ showModal, setShowModal }) => {
         <section>
             <div className={headerStyle['header-page-container']}>
                 <Link to='/' className={headerStyle['home']}>
-                    <img alt='ikonka domu' src='../dist/images/home-button.png'></img>
+                    <img alt='ikonka domu' src={headerPageImages.homeButton}></img>
                     <span>Strona główna</span>
                 </Link>
                 <div className={headerStyle['bozon-icon-container']}>
-                    <img alt='logo bozonu' className={headerStyle['bozon-icon']} src='../dist/images/bozon-logo.jpg'></img>
+                    <img alt='logo bozonu' className={headerStyle['bozon-icon']} src={headerPageImages.bozonLogo}></img>
                 </div>
                 <div className={headerStyle['hamburger-icon-container']}>
                     <button
                         onClick={toggleModal}
                         style={{ display: 'flex', justifyContent: 'center', backgroundColor: 'transparent', border: 'none' }}>
-                        <img alt='rozwiniecie menu' className={headerStyle['hamburger']} src='../dist/images/icons8-hamburger-menu-50.png'></img>
+                        <img alt='rozwiniecie menu' className={headerStyle['hamburger']} src={headerPageImages.hamburgerIcon}></img>
                         {showModal &&
                             (
                                 <MenuModal>
