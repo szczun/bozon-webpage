@@ -2,16 +2,25 @@
 import homeStyle from '../styles/homePage.module.css';
 
 // images
-import leftArrow from '../dist/images/icons8-left-arrow-50.png';
-import rightArrow from '../dist/images/icons8-right-arrow-50.png';
+import leftArrow from '../images/icons8-left-arrow-50.png';
+import rightArrow from '../images/icons8-right-arrow-50.png';
 
 import arrayImages from './import/importSemi';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 const Seminaria = () => {
 
     const [currentIndex, setCurrentIndex] = useState<number>(0);
     const totalAmountOfImages: number = arrayImages.length;
+    const [skipPhotoAni] = useAutoAnimate<HTMLDivElement>({ duration: 200 });
+
+    useEffect(() => {
+        arrayImages.forEach((src) => {
+            const img = new Image();
+            img.src = src; // ładuje obraz do pamięci przeglądarki
+        });
+    }, []);
+
 
     const nextImage = () => {
         if (currentIndex < totalAmountOfImages - 1) {
@@ -29,9 +38,6 @@ const Seminaria = () => {
         }
 
     }
-
-    const [skipPhotoAni] = useAutoAnimate<HTMLDivElement>({ duration: 200 });
-
 
     return (
         <div className={homeStyle['seminaria-container']}>

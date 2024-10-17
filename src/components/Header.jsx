@@ -43,7 +43,7 @@ const Header = ({ showModal, setShowModal }) => {
                             (
                                 <MenuModal>
                                     <ul>
-                                        <Link to={'/o_nas'}><li>O nas</li></Link>
+                                        <Link to={'/o-nas'}><li>O nas</li></Link>
                                         <Link to={'/kontakt'}><li>Kontakt</li></Link>
                                         <Link><li>Członkostwo</li></Link>
                                         <Link><li>Projekty</li></Link>

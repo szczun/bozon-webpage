@@ -9,10 +9,10 @@ const App = () => {
     const [showModal, setShowModal] = useState(false);
     return (
         <BrowserRouter>
-            <div className={style['root-container']}>
-                <Header showModal={showModal} setShowModal={setShowModal} />
+            <Header showModal={showModal} setShowModal={setShowModal} />
+            <div className={`${style['root-container']} ${showModal && style['modal-open']}`}>
                 <Routes>
-                    {!showModal && <Route path='/' element={<HomePage />}></Route>}
+                    <Route path={'/'} element={<HomePage />}></Route>
                 </Routes>
             </div>
         </BrowserRouter>

@@ -2,7 +2,7 @@
 import homeStyle from '../styles/homePage.module.css';
 
 // components
-import Seminaria from './Seminaria.tsx';
+import Seminaria from './Seminaria';
 
 //images
 import homePageImages from './import/importHomePagePhotos'
