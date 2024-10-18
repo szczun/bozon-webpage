@@ -1,0 +1,50 @@
+@media (max-width: 454px) {
+    .about-us-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .image-container img {
+        width: 100%;
+    }
+
+    .first-part {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .first-part h1 {
+        color: #1A00FF;
+        font-family: "Roboto Mono", monospace;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .first-part h2 {
+        color: black;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: "open sans";
+    }
+
+    .text-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 1rem;
+        flex-direction: column;
+
+        position: absolute;
+    }
+}

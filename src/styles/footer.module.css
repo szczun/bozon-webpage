@@ -1,0 +1,42 @@
+@media (max-width: 454px) {
+    .footer-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+
+        padding: 0rem 0.5rem;
+    }
+
+    .logo-name-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-name-container img {
+        width: 50px;
+        height: auto;
+    }
+
+    .logo-name-container span {
+        color: black;
+        font-family: "Roboto Condensed", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .social-media-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .social-media-container img {
+        width: 25px;
+        height: auto;
+    }
+}
